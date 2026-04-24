@@ -1,0 +1,580 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.white {
+  color: #f5f5f7;
+}
+
+.black {
+  color: #000000;
+}
+
+.primaryColor {
+  color: #0071e3;
+}
+
+.buttonText {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.btnFillPrimary {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  background: #0071e3;
+}
+
+.btnFillWhite {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.btnGhost {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  border: 1px solid #2997ff;
+}
+
+.btnGhostWhite {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  border: 1px solid #fff;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#header {
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 44px;
+  background-color: #f5f5f78a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.headerText {
+  font-family: Inter, sans-serif;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerItemIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+#iconCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 12px;
+  gap: 24px;
+}
+
+#headerLogoCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 12px;
+}
+
+.appleLogoS {
+  height: 20px;
+  width: 16px;
+}
+
+.appleLogoB {
+  width: 26px;
+  height: 30px;
+}
+
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  width: 18px;
+}
+
+.donateText {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 8px;
+  padding-inline: 24px;
+}
+
+/* section3 */
+
+#bigCard {
+  gap: 12px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bigCardTop {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+  height: 692px;
+  width: 100%;
+}
+
+.bigCardEnd {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  position: relative;
+  height: 692px;
+  width: 100%;
+}
+
+.bigCardImg {
+  position: absolute;
+  align-self: center;
+  object-fit: cover;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#bigCardImg {
+  position: absolute;
+  align-self: center;
+  object-fit: cover;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+}
+
+#bigCardPhone {
+  position: absolute;
+  align-self: center;
+  object-fit: cover;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+}
+
+.bigCardContenttop {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  margin-top: 55px;
+  gap: 20px;
+}
+
+.bigCardContenttop {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  margin-bottom: 82px;
+  gap: 20px;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+#watchTxt {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bigCardBigText {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bigCardsmallText {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Section2 */
+
+#smallCard {
+  gap: 12px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.smallCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 580px;
+  gap: 12px;
+}
+
+.smallCardImg {
+  position: absolute;
+  align-self: center;
+  object-fit: cover;
+  top: 0px;
+  width: 100%;
+  height: 580px;
+  z-index: -1;
+}
+
+.smallCardTop {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.smallCardEnd {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.smallCardContentTop {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+  padding-top: 58px;
+  gap: 20px;
+  height: 580px;
+  width: 100%;
+}
+
+.smallCardContentEnd {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 58px;
+  height: 580px;
+  width: 100%;
+  gap: 20px;
+}
+
+.smallTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 2px;
+}
+
+.smallCardBigText {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.smallCardsmallText {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  width: 320px;
+}
+
+#absoluteText {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    #0090f7 0%,
+    #ba62fc 33.33%,
+    #f2416b 66.67%,
+    #f55600 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 40px;
+  align-self: center;
+}
+
+/* Section3 */
+
+#appleTv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 56px;
+}
+
+#movieContainer {
+  display: flex;
+  width: 100%;
+  height: 668px;
+  gap: 12px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+#phoneMovieCon {
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  display: none;
+}
+
+.movieBanner {
+  width: 33.3 %;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+.phoneMovieBanner {
+  width: 33%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+#ellipseCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.ellipse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0000002a;
+}
+
+.movieBannerS {
+  width: 20%;
+}
+
+#movieConS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 236px;
+  gap: 12px;
+  padding-inline:;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .headerItemIcon {
+    display: none;
+  }
+
+  #bigCardImg {
+    display: block;
+  }
+
+  .bigCardBigText {
+    font-size: 42px;
+  }
+
+  .bigCardsmallText {
+    font-size: 22px;
+  }
+
+  .smallCardBigText {
+    font-size: 30px;
+  }
+
+  #appleTv {
+    height: 600px;
+  }
+
+  #movieContainer {
+    display: flex;
+    width: 100%;
+    height: 368px;
+  }
+
+  .movieBanner {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+
+  #movieConS {
+    height: 161px;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .movieBannerS {
+    width: 35%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  #bigCardImg {
+    display: none;
+  }
+  #bigCardPhone {
+    display: block;
+  }
+  .smallCardContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  .bigCardBigText {
+    font-size: 30px;
+  }
+
+  .bigCardsmallText {
+    font-size: 18px;
+  }
+
+  .smallCardBigText {
+    font-size: 30px;
+  }
+
+  #appleTv {
+    height: 700px;
+    margin-bottom: 24px;
+  }
+
+  #movieContainer {
+    display: none;
+  }
+
+  #phoneMovieCon {
+    display: flex;
+    gap: 12px;
+  }
+
+  #movieConS {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 24px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .movieBannerS {
+    width: 100%;
+    height: 100%;
+  }
+}

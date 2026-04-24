@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #83b5d3, #d7e4eb);
+}
+.container {
+  width: 1440px;
+  margin-inline: auto;
+  position: relative;
+}
+
+#hero {
+  background-image: url(/assets/sec1-bg.png);
+  height: 773px;
+}
+
+#headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 118px;
+  height: 80px;
+  width: 1204px;
+  position: fixed;
+  background-color: #ffffff2a;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.logo {
+  height: 34px;
+  width: 100px;
+}
+
+#navButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.navButton {
+  height: 22px;
+  width: 100px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #83b5d36a;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-inline: 16px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 32px #0000002a;
+  text-decoration: none;
+}
+
+#user {
+  height: 20px;
+  width: 20px;
+  background-color: #83b5d36a;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-inline: 16px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 32px #0000002a;
+}
+
+#languageChanger {
+  height: 40px;
+  width: 40px;
+  border-radius: 24px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#pure {
+  font-size: 80px;
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  color: #e8edf2b8;
+  height: 80px;
+  margin: 0;
+}
+
+#awaits {
+  font-size: 250px;
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  color: #fdfdfefa;
+  height: 250px;
+  margin: 0;
+}
+
+#heronumber {
+  font-size: 64px;
+  font-family: Inter, sans-serif;
+  font-weight: 800;
+  color: #ffffffcc;
+  height: 64px;
+  margin: 0;
+}
+
+#heroTextContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#location {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #d8e4e9;
+}
+
+.card {
+  width: 275px;
+  height: 370px;
+  border-radius: 40px;
+  box-shadow:
+    -8px -8px #83b5d3,
+    8px 8px #9fc6de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cardText {
+  font-size: 37px;
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  color: #fdfdfecc;
+  text-align: center;
+  text-shadow: 0px 4px 4px #000000a6;
+  position: absolute;
+  z-index: 3;
+}
+
+.cardImgOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: #9db8da;
+  opacity: 20%;
+  z-index: 2;
+}
+
+.cardImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+.card:hover .cardImg {
+  filter: brightness(0.7);
+}
+
+#roadmap {
+  height: 902px;
+  background-image: url(/assets/sec3-bg.png);
+  background-size: cover;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+.titleTextContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.bigTitleText {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  text-align: center;
+  margin: 0;
+}
+
+.smallTitleText {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: #18181bb2;
+  margin: 0;
+}
+
+#roadCardContainer {
+  width: 1200px;
+  height: 640px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.roadCard {
+  width: 453px;
+  height: 112px;
+  border-radius: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 30px;
+  position: relative;
+}
+
+.roadImage {
+  height: 245px;
+  width: 245px;
+  position: absolute;
+  opacity: 0;
+}
+
+#roadCardContainer:has(.cardBg-1:hover) #day1Position {
+  opacity: 1;
+}
+
+#roadCardContainer:has(.cardBg-2:hover) #day2Position {
+  opacity: 1;
+}
+
+#roadCardContainer:has(.cardBg-3:hover) #day3Position {
+  opacity: 1;
+}
+
+#roadCardContainer:has(.cardBg-4:hover) #day4Position {
+  opacity: 1;
+}
+
+#roadCardContainer:has(.cardBg-5:hover) #day5Position {
+  opacity: 1;
+}
+
+.roadCard:hover {
+  outline: white 4px solid;
+}
+
+.cardTextCon {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+}
+
+.bigText {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0;
+}
+
+.labelCon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.LabelText {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+  margin: 0;
+}
+
+.labelIcon {
+  height: 14px;
+  width: 14px;
+}
+
+.DateContainer {
+  height: 52px;
+  width: 48px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+}
+
+#day1Position {
+  top: 65px;
+  left: 912px;
+}
+
+#day2Position {
+  bottom: 420px;
+  left: 712px;
+}
+
+#day3Position {
+  top: 82px;
+  left: 583px;
+}
+
+#day4Position {
+  bottom: 458px;
+  left: 532px;
+}
+
+#day5Position {
+  bottom: 458px;
+  left: 700px;
+}
+
+.cardBg-1 {
+  background-color: #eee9d9;
+}
+.cardBg-2 {
+  background-color: #8bb8c1cc;
+}
+.cardBg-3 {
+  background-color: #aad8d7cc;
+}
+.cardBg-4 {
+  background-color: #8bc0bdcc;
+}
+.cardBg-5 {
+  background-color: #97cce0cc;
+}
+
+#price {
+  height: 1120px;
+  background-image: url(/assets/sec4-bg.png);
+  background-size: cover;
+  display: flex;
+  padding-top: 40px;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+#priceCardcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.priceCard {
+  width: 384px;
+  height: 527px;
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.priceCard:hover {
+  box-shadow:
+    -8px -8px #2e414740,
+    8px 8px #29728b40;
+}
+
+.priceCard:hover .priceCardBtn {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 999px;
+  height: 48px;
+  width: 100%;
+  color: white;
+}
+
+.priceCardTop {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 32px 24px 24px 24px;
+  gap: 16px;
+}
+
+.priceCardIcon {
+  height: 36px;
+  width: 36px;
+}
+
+.priceHeaderText {
+  font-family: inter;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.priceCardContent {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  padding: 12px 24px 48px 24px;
+  gap: 32px;
+}
+
+#priceTextBadge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 336px;
+}
+
+.priceBigTextcon {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.priceBigtext {
+  font-family: inter;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.priceSmallText {
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+  color: #919191;
+  margin: 0;
+}
+
+.priceBadge {
+  background-color: #6972b5;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 999px;
+}
+
+.priceBadgeText {
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  padding: 4px 16px 4px 16px;
+}
+
+.priceListCon {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+}
+.listTitle {
+  font-family: inter;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px 40px 0px 40px;
+}
+
+.listCon {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.listIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.listText {
+  color: #919191;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px;
+}
+.priceCardBtn {
+  background-color: #a4d1e2;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 999px;
+  height: 48px;
+  width: 100%;
+}
+
+.priceBtnText {
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px 40px 0px 40px;
+}
+
+#footer {
+  width: 1200px;
+  height: 204px;
+  background-color: #9fc6de;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 80px;
+}
+
+#socialIconCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialIconBtn {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  border-radius: 999px;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.socialText {
+  font-size: 18px;
+  font-family: inter;
+  font-weight: 700;
+  color: #6972b5;
+  margin: 0;
+}
