@@ -1,13 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tesla</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="container">
-        <section></section>
+      <header class="header">
+        <div id="logoCon">
+          <img src="./assets/Logo-White.png" alt="logo" id="white" />
+          <img src="./assets/Logo-Black.png" alt="logo" id="black" />
+        </div>
+        <div class="buttonCon">
+          <div class="navBtn">Vehicles</div>
+          <div class="navBtn">Energy</div>
+          <div class="navBtn">Charging</div>
+          <div class="navBtn">Discover</div>
+          <div class="navBtn">Shop</div>
+        </div>
+        <div class="iconCon">
+          <img src="./assets/icon-support.png" alt="" class="navIcon" />
+          <img src="./assets/icon-region.png" alt="" class="navIcon" />
+          <img src="./assets/icon-account.png" alt="" class="navIcon" />
+        </div>
+        <div id="hoverContainer">
+          <div class="carNav">
+            <div class="carNavContent">
+              <img
+                src="./assets/nav-car-01.png"
+                alt="carImg"
+                class="carNavImg"
+              />
+              <p class="carNavTitle">Model S</p>
+              <div class="carNavlinkTxt">
+                <p class="footerTxt underline">Learn</p>
+                <p class="footerTxt underline">Order</p>
+              </div>
+            </div>
+            <div class="carNavContent">
+              <img
+                src="./assets/nav-car-02.png"
+                alt="carImg"
+                class="carNavImg"
+              />
+              <p class="carNavTitle">Model 3</p>
+              <div class="carNavlinkTxt">
+                <p class="footerTxt underline">Learn</p>
+                <p class="footerTxt underline">Order</p>
+              </div>
+            </div>
+            <div class="carNavContent">
+              <img
+                src="./assets/nav-car-03.png"
+                alt="carImg"
+                class="carNavImg"
+              />
+              <p class="carNavTitle">Model X</p>
+              <div class="carNavlinkTxt">
+                <p class="footerTxt underline">Learn</p>
+                <p class="footerTxt underline">Order</p>
+              </div>
+            </div>
+            <div class="carNavContent">
+              <img
+                src="./assets/nav-car-06.png"
+                alt="carImg"
+                class="carNavImg"
+              />
+              <p class="carNavTitle">Model Y</p>
+              <div class="carNavlinkTxt">
+                <p class="footerTxt underline">Learn</p>
+                <p class="footerTxt underline">Order</p>
+              </div>
+            </div>
+            <div class="carNavContent">
+              <img
+                src="./assets/nav-car-05.png"
+                alt="carImg"
+                class="carNavImg"
+              />
+              <p class="carNavTitle">Cybertruck</p>
+              <div class="carNavlinkTxt">
+                <p class="footerTxt underline">Learn</p>
+                <p class="footerTxt underline">Order</p>
+              </div>
+            </div>
+            <div class="carNavContent">
+              <img
+                src="./assets/nav-car-04.png"
+                alt="carImg"
+                class="carNavImg"
+              />
+              <p class="carNavTitle">Help Me Choose</p>
+              <div class="carNavlinkTxt">
+                <p class="footerTxt underline">Learn</p>
+                <p class="footerTxt underline">Order</p>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+          </div>
+          <hr />
+          <div class="navTxt">
+            <p class="carNavTxt">Inventory</p>
+            <p class="carNavTxt">User Cars</p>
+            <p class="carNavTxt">Demo Drive</p>
+            <p class="carNavTxt">Trade-in</p>
+            <p class="carNavTxt">Compare</p>
+            <p class="carNavTxt">Help Me Charge</p>
+            <p class="carNavTxt">Fleet</p>
+            <p class="carNavTxt">Semi</p>
+            <p class="carNavTxt">Roadster</p>
+          </div>
+        </div>
+      </header>
+      <section class="sectionCon">
+        <video
+          autoplay
+          loop
+          src="./assets/Section1-Background.mp4"
+          class="BGcontent"
+        ></video>
+        <div class="topContent">
+          <p class="title white">Model Y</p>
+          <div class="priceCon">
+            <p class="priceTxt white">From $31,890*</p>
+            <p class="descTxt white">
+              After Federal Tax Credit & Est. Gas Savings
+            </p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Shop Available</div>
+            <div class="button Primary">Shop Available</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white">
+              *Price before incentives and savings is $42,990, excluding taxes
+              and fees. Subject to change.
+            </p>
+            <p class="descTxt white" style="text-decoration: underline">
+              Learn about est. gas savings.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-02.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black">Brand New Model 3</p>
+          <div class="priceCon">
+            <p class="priceTxt black">Lease starting at $329/mo*</p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Custom Order</div>
+            <div class="button Primary">Demo Drive</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white">
+              *Excludes taxes and fees with price subject to change. Available
+              in select states.
+            </p>
+            <p class="descTxt white" style="text-decoration: underline">
+              See Details
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-03.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black">Model X</p>
+          <div class="priceCon">
+            <p class="priceTxt black">From $68,590*</p>
+            <p class="descTxt">After Federal Tax Credit & Est. Gas Savings</p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Custom Order</div>
+            <div class="button Primary">Demo Drive</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white">
+              *Price before incentives and savings is $79,990, excluding taxes
+              and fees. Subject to change.
+            </p>
+            <p class="descTxt white" style="text-decoration: underline">
+              Learn about est. gas savings.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-04.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black">Model S</p>
+          <div class="priceCon">
+            <p class="priceTxt black">From $71,090*</p>
+            <p class="descTxt">After Est. Gas Savings</p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Custom Order</div>
+            <div class="button Primary">Demo Drive</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt">
+              *Price before savings is $74,990, excluding taxes and fees.
+              Subject to change.
+            </p>
+            <p class="descTxt" style="text-decoration: underline">
+              Learn about est. gas savings.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-05.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black"></p>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Order Now</div>
+            <div class="button Primary">Learn More</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt"></p>
+            <p class="descTxt" style="text-decoration: underline"></p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <video
+          autoplay
+          loop
+          src="./assets/Section6-Background.mp4"
+          class="BGcontent"
+        ></video>
+        <div class="topContent">
+          <p class="title white">Experience Tesla</p>
+          <div class="priceCon">
+            <p class="descTxt white">Schedule a Demo Drive Today</p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button Border">Learn More</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white"></p>
+            <p class="descTxt white" style="text-decoration: underline"></p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-07.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title white">Solar Panels</p>
+          <div class="priceCon">
+            <p class="priceTxt white" style="text-decoration: underline">
+              Schedule a Virtual Consultation
+            </p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Order Now</div>
+            <div class="button Primary">Learn More</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white"></p>
+            <p class="descTxt white" style="text-decoration: underline"></p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-08.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black">Solar Roof</p>
+          <div class="priceCon">
+            <p class="priceTxt black">Produce Clean Energy From Your Roof</p>
+          </div>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Order Now</div>
+            <div class="button Primary">Learn More</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white"></p>
+            <p class="descTxt white" style="text-decoration: underline"></p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-09.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black">Powerwall</p>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Order Now</div>
+            <div class="button Primary">Learn More</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white"></p>
+            <p class="descTxt white" style="text-decoration: underline"></p>
+          </div>
+        </div>
+      </section>
+      <section class="sectionCon">
+        <img src="./assets/section-10.png" alt="" class="BGcontent" />
+        <div class="topContent">
+          <p class="title black">Accessories</p>
+        </div>
+        <div class="bottomContent">
+          <div class="buttonCon">
+            <div class="button White">Shop Now</div>
+          </div>
+          <div class="priceCon">
+            <p class="descTxt white"></p>
+            <p class="descTxt white" style="text-decoration: underline"></p>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="buttonCon">
+            <div class="footerTxt">Tesla © 2024</div>
+            <div class="footerTxt">Privacy & Legal</div>
+            <div class="footerTxt">Vehicle Recalls</div>
+            <div class="footerTxt">Contact</div>
+            <div class="footerTxt">News</div>
+            <div class="footerTxt">Get Updates</div>
+            <div class="footerTxt">Locations</div>
+          </div>
+        </footer>
+      </section>
     </main>
-</body>
+  </body>
 </html>
