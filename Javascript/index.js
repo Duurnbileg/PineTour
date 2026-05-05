@@ -2,7 +2,7 @@
 
 let number = 10;
 
-if (number % 5 == 0) {
+if (number % 5 === 0) {
   console.log("true");
 } else {
   console.log("false");
@@ -137,4 +137,4 @@ if (temp > 30) {
   console.log("It's a warm day");
 } else if (temp <= 20) {
   console.log("It's a bit cool today");
-} 
+}
