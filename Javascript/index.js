@@ -1,6 +1,6 @@
 // 1. Өгөгдсөн тоо нь 5-д хуваагддаг үгүйг шалгана уу.
 let number = 10;
-if (number % 5 === 0) {
+if (number % 5 == 0) {
   console.log("true");
 } else {
   console.log("false");
@@ -27,7 +27,7 @@ if (too >= 1 && too <= 100) {
 }
 // 4. 3 тооноос хамгийн ихийг нь олж хэвлэнэ үү .
 let a = 1;
-let b = 2;
+let b = 6;
 let c = 3;
 if (a > b && a > c) {
   console.log("A");
@@ -104,9 +104,7 @@ if (time >= 24 || time >= 20 || time <= 4) {
 // for example : weather = "sunny" temperature = 25 / It's a warm day.
 let temp = 29;
 let weather = "sunny";
-if ((weather = "rainy")) {
-  console.log("Don't forget your umbrella!");
-} else if ((weather = "sunny")) {
+if (weather == "sunny" || weather == "rainy") {
   if (temp > 30) {
     console.log("It's a hot day!");
   } else if (temp >= 20 && temp <= 30) {
