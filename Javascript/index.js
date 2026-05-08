@@ -44,18 +44,31 @@ if (year % 4 === 0) {
   console.log("non olymp year");
 }
 // 6. Check the given number is not a prime number .
-let givenNumber = 10;
-let divider = 1;
-if (divider >= 2 && divider <= givenNumber) {
-} else if (givenNumber % givenNumber === 0 && givenNumber % divider === 0) {
-  console.log("PrimeNumber");
-} else {
-  console.log("Non Prime");
+let gNumber = 15;
+let isPrime = true;
+
+for (let i = 2; i < gNumber; i++) {
+  if (gNumber % i === 0) {
+    isPrime = false;
+  }
 }
+
+console.log(isPrime);
+
 // 7. Өгөгдсөн тоог анхны тоо мөн бишийг шалгана уу . (1 болон өөртөө хуваагддаг тоог анхны тоо гэнэ)
 // example :
 // number = 2 // true
 // number = 15 // false
+let num = 2
+let isPrime = true
+
+for (let i = 2; i < num; i++) {
+  if (num % i === 0) {
+    isPrime = false;
+  }
+}
+
+console.log(isPrime);
 
 // 8. Өгөгдсөн сурагчийн дүнг A , B , C , D , F бүлэгт ангилж хэвлэнэ үү .
 //    90-100, A
@@ -104,7 +117,7 @@ if (time >= 24 || time >= 20 || time <= 4) {
 // for example : weather = "sunny" temperature = 25 / It's a warm day.
 let temp = 29;
 let weather = "sunny";
-if (weather == "sunny" || weather == "rainy") {
+if (weather == "sunny") {
   if (temp > 30) {
     console.log("It's a hot day!");
   } else if (temp >= 20 && temp <= 30) {
@@ -112,4 +125,6 @@ if (weather == "sunny" || weather == "rainy") {
   } else if (temp <= 20) {
     console.log("It's a bit cool today");
   }
+} else if (weather == "rainy") {
+  console.log("Don't forget your umbrella!s")
 }
