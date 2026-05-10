@@ -9,14 +9,19 @@ for (i = massive.length - 1; i > 0 - 1; i--) {
 
 let massive = [1, 2, 7, 4, 5, 11, 7, 8];
 let oroi = [];
-
+if (massive[0] > massive[2]) {
+    oroi.push(massive[0]);
+}
 for (let i = 1; i < massive.length - 1; i++) {
     if (massive[i] > massive[i - 1] && massive[i] > massive[i + 1]) {
         oroi.push(massive[i]);
     }
 }
+if (massive[0] > massive[i - 1]) {
+    oroi.push(massive[0]);
+}
 
-// console.log(oroi);
+console.log(oroi);
 
 // Өгөгдсөн массивийн бүх хосыг хэвлэ
 
