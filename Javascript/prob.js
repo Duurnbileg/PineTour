@@ -1,41 +1,58 @@
 // Өгөгдсөн Массивийн элэментүүдийг эсрэг дарааллаар буцаа.
 
-let massive = [1, 2, 3, 4, 5, 6, 7, 8];
-for (i = massive.length - 1; i > 0 - 1; i--) {
-    console.log(massive[i]);
-}
+// let massive = [1, 2, 3, 4, 5, 6, 7, 8];
+// for (i = massive.length - 1; i > 0 - 1; i--) {
+//     console.log(massive[i]);
+// }
 
 // Хөрш элэментүүдээсээ их буюу орой элэментүүдийн тоог буцаа
 
-let massive = [1, 2, 7, 4, 5, 11, 7, 8];
-let oroi = [];
-if (massive[0] > massive[2]) {
-    oroi.push(massive[0]);
-}
-for (let i = 1; i < massive.length - 1; i++) {
-    if (massive[i] > massive[i - 1] && massive[i] > massive[i + 1]) {
-        oroi.push(massive[i]);
-    }
-}
-if (massive[0] > massive[i - 1]) {
-    oroi.push(massive[0]);
-}
+// let massive = [1, 2, 7, 4, 5, 11, 7, 8];
 
-console.log(oroi);
+
+// const oroiOloh = (massive) => {
+//     let peaks = [];
+//     if (massive[0] > massive[1]) {
+//         peaks.push(massive[0]);
+//     }
+//     for (let i = 1; i < massive.length - 1; i++) {
+//         if (
+//             massive[i] > massive[i - 1] &&
+//             massive[i] > massive[i + 1]
+//         ) {
+//             peaks.push(massive[i]);
+//         }
+//     }
+//     if (
+//         massive[massive.length - 1] >
+//         massive[massive.length - 2]
+//     ) {
+//         peaks.push(massive[massive.length - 1]);
+//     }
+
+//     return peaks;
+// }
+
+// console.log(oroiOloh(massive));
 
 // Өгөгдсөн массивийн бүх хосыг хэвлэ
 
-let a = [1, 2, 7, 4, 4, 11, 7, 8];
-let hos = [];
+// let a = [1, 2, 7, 4, 4, 11, 7, 8];
 
-for (let i = 0; i < a.length; i++) {
-    for (let j = i + 1; j < a.length - 1; j++) {
-        if (a[i] === a[j]) {
-            hos.push(a[i], a[j])
-        }
-    }
-}
-console.log(hos);
+// const pair = (array) => {
+//     let hos = [];
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = i + 1; j < array.length - 1; j++) {
+//             if (array[i] === array[j]) {
+//                 hos.push(array[i], array[j])
+//             }
+//         }
+//     }
+//     return hos
+// }
+
+// console.log(pair(a));
+
 
 // Массив болон тоо өгөгдөв. Нийлбэр нь өгөгдсөн тоотой тэнцүү байдаг хосын тоог ол
 
@@ -153,6 +170,39 @@ console.log(hos);
 //  57 - do not round(60 - 57 is 3 or higher)
 //  Given the initial value of  for each of Sam's  students, write code to automate the rounding process.
 
+// 1.Массивын дундаж ба медиан
+// Массив авч, дундаж(average) болон медианыг буцаа.
+//     Жишээ: [1, 2, 3, 4, 5] → { avg: 3, median: 3 }
 
+// let average = (array) => {
+//     let b = 0
+//     let c = 0
+//     for (let i = 0; i < array.length; i++) {
+//         b = b + array[i]
+//         c = b / array.length
+//     } return c
+// }
+
+// let a = [1, 2, 3, 4, 5]
+// console.log(average(a));
+
+// 2.String доторх эгшиг тоолох
+// String авч, хэдэн эгшиг(a, e, i, o, u) байгааг буцаа.
+//     Жишээ: "hello" → 2
+// 3.Anagram шалгах
+// Хоёр string авч, үсгийн дараалал өөр боловч ижил үсгээр бүтсэн эсэхийг шалга.
+//     Жишээ: "listen" & "silent" → true
+// 4.Тоог Ром тоо болгох
+// Тоо авч, Ром цифр болгон буцаадаг функц бич.
+//     Жишээ: 14 → XIV, 2025 → MMXXV
+// 5.Longest Increasing Subsequence(LIС) – энгийн хувилбар
+// Массив авч, хамгийн урт өсөх дарааллын уртыг буцаа.
+//     Жишээ: [10, 9, 2, 5, 3, 7, 101, 18] → 4([2, 3, 7, 101])
+// 6.String доторх хамгийн урт palindrome substring
+// String авч, хамгийн урт палиндром substring буцаа.
+//     Жишээ: "babad" → "bab" эсвэл "aba"
+// 7.Массив дахь дундажтай ойрхон тоо
+// Массив авч, дундажид хамгийн ойрхон тоог буцаа.
+//     Жишээ: [2, 5, 8, 12] → 8(дундаж 6.75)
 
 
