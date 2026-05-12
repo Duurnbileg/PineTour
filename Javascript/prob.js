@@ -85,8 +85,38 @@
 // console.log(hos);
 
 // Өгөгдсөн массивийн сөрөг тоонуудыг зүүн талд нь байрлуул
-// Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
 
+const Negative = (array) => {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < 0) {
+            result.unshift(array[i]);
+        } else {
+            result.push(array[i]);
+        }
+    }
+    return result;
+};
+
+let a = [1, -2, 7, -4, 5, -11, 8];
+console.log(Negative(a));
+
+
+// Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
+const Negative = (array) => {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < 0) {
+            result.unshift(array[i]);
+        } else {
+            result.push(array[i]);
+        }
+    }
+    return result;
+};
+
+let a = [1, 2, 3, 4, 5, 6, 7, 9, 10];
+console.log(Negative(a));
 // 1. Өгөгдсөн массивын гишүүдийн нийлбэрийг ол.
 // let massive = [12, 98, 80, 80, 76, 27];
 // let b = 0;
@@ -120,20 +150,27 @@
 
 // let a = [12, 1, 98, 67, 87, 90, 98];
 // let max = a[0];
-// let c = []
-
-// for (let i = 1; i < a.length; i++) {
-//     if (a[i] >= max) {
-//         max = a[i];
-//         c.push(i);
+// let maxIndex = 0;
+// const Findmax = (a) => {
+//     for (let i = 1; i < a.length; i++) {
+//         if (a[i] >= max) {
+//             max = a[i];
+//             maxIndex = i;
+//         }
 //     }
+//     return maxIndex
 // }
-// console.log(c);
+
+// const numbers = [12, 1, 98, 67, 87, 90, 98]
+// const answer = Findmax(numbers)
+// console.log(answer);
+
+
 
 // 1. Массив болон тоо өгөгдөв. Өгөгдсөн тоо массивд байгаа бол дугаарыг нь, байхгүй бол -1 буцаа
 
 // let a = [12, 1, 98, 67, 87, 90, 98]
-// let too = 12
+// let too = 1
 // const numFind = (array) => {
 //     for (let i = 0; i < array.length; i++) {
 //         if (array[i] === too) {
@@ -152,19 +189,14 @@
 
 // const bair = (array) => {
 // }
-
-
 // 3. Өгөгдсөн массив өсөх эрэмбээр байвал true үгүй бол false буцаа
 // 4. HackerLand University has the following grading policy:
-
 // - Every student receives a in the inclusive range from  to.
 //         - Any  less than  is a failing grade.
 //     Sam is a professor at the university and likes to round each student's  according to these rules:
 //     If the difference between the  and the next multiple of  is less than, round  up to the next multiple of.
 //     If the value of  is less than, no rounding occurs as the result will still be a failing grade.
-
 //     Examples:
-
 //  84 - round to(85 - 84 is less than 3)
 //  28 - do not round(result is less than 40)
 //  57 - do not round(60 - 57 is 3 or higher)
@@ -173,19 +205,6 @@
 // 1.Массивын дундаж ба медиан
 // Массив авч, дундаж(average) болон медианыг буцаа.
 //     Жишээ: [1, 2, 3, 4, 5] → { avg: 3, median: 3 }
-
-// let average = (array) => {
-//     let b = 0
-//     let c = 0
-//     for (let i = 0; i < array.length; i++) {
-//         b = b + array[i]
-//         c = b / array.length
-//     } return c
-// }
-
-// let a = [1, 2, 3, 4, 5]
-// console.log(average(a));
-
 // 2.String доторх эгшиг тоолох
 // String авч, хэдэн эгшиг(a, e, i, o, u) байгааг буцаа.
 //     Жишээ: "hello" → 2
@@ -205,4 +224,21 @@
 // Массив авч, дундажид хамгийн ойрхон тоог буцаа.
 //     Жишээ: [2, 5, 8, 12] → 8(дундаж 6.75)
 
+// 1. Remove Duplicates from Sorted Array-leet
+// nums = [1, 4, 6, 6, 8, 10]
+// 2. Өгөгдсөн гурвалжингийн гурвалжин болж чадах эсэхийг шалгаад, талбайг ол. .
+// 3. Өгөгдсөн утасны дугаарыг аль оператор болохыг буцаа.
+// 4. Өгөгдсөн тойргийг талбайг ол. 
+// 5. Өгөгдсөн тооны цифрүүдийн нийлбэрийг ол.
+// 6. Өгөгдсөн тоо палиндром бол true үгүй бол false буцаа. Палиндром тоо гэдэг нь тонгорогсон тоотойгоо тэнцүү тоог хэлнэ
+// 7. Өгөгдсөн хоёр натурал тооны хамгийн их ерөнхий хуваагчийг ол.
+// 8. Хүү n гишгүүртэй шатаар өгсөхдөө 2 янзаар урагшилж чадна. Зогсож байгаа гишгүүрийнхээ дараах гишгүүрт, эсвэл 1 алгасаад дараагийн гишгүүрт алхаж очно. Нэгдүгээр гишгүүрийн өмнө зогсож байгаа хүү n-р гишгүүр хүртэл хичнээн ялгаатай маршрутаар алхаж очиж вэ?
+// 9. Фибоначчийн дарааллын n-р гишүүнийг ол.
+// 10. Өгөгдөн массивийн i аас j дэх гишүүдийн хамгийн багыг ол
+// 11. arr = [4, 3, 6, 65, 8, 7, 90, 10, 5] өсөх дарааллаар эрэмблэ.
+// 12 . Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. 
+// Example 1:
+// Input: nums = [1, 3, 5, 6], target = 5 Output: 2
+// Example 2:
+// Input: nums = [1, 3, 5, 6], target = 2 Output: 1
 
