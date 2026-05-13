@@ -86,37 +86,33 @@
 
 // Өгөгдсөн массивийн сөрөг тоонуудыг зүүн талд нь байрлуул
 
-const Negative = (array) => {
-    let result = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0) {
-            result.unshift(array[i]);
-        } else {
-            result.push(array[i]);
-        }
-    }
-    return result;
-};
+// const Negative = (array) => {
+//     let result = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] < 0) {
+//             result.unshift(array[i]);
+//         } else {
+//             result.push(array[i]);
+//         }
+//     }
+//     return result;
+// };
 
-let a = [1, -2, 7, -4, 5, -11, 8];
-console.log(Negative(a));
+// let a = [1, -2, 7, -4, 5, -11, 8];
+// console.log(Negative(a));
 
 
 // Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
-const Negative = (array) => {
-    let result = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0) {
-            result.unshift(array[i]);
-        } else {
-            result.push(array[i]);
-        }
-    }
-    return result;
-};
+// const numFind = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] + 1 !== array[i + 1]) {
+//             return array[i] + 1
+//         }
+//     }
+// }
+// let a = [1, 2, 3, 4, 5, 6, 7, 9, 10];
+// console.log(numFind(a));
 
-let a = [1, 2, 3, 4, 5, 6, 7, 9, 10];
-console.log(Negative(a));
 // 1. Өгөгдсөн массивын гишүүдийн нийлбэрийг ол.
 // let massive = [12, 98, 80, 80, 76, 27];
 // let b = 0;
@@ -185,11 +181,32 @@ console.log(Negative(a));
 // 2. Өгөгдсөн массивын элементүүдийг хойш нь нэг цикл шилжилт хий. Өөрөөр хэлбэл 1-рийг 2-рт, 2-рыг 3-рт, гэх мэт сүүлийн элементийг 1-рт тус тус шилжүүл.
 //     Жич: 1 2 3 4 5 -> 5 1 2 3 4
 
-// let a = [1, 2, 3, 4, 5]
+// const move1 = (array) => {
+//     let last = array[array.length - 1];
+//     for (let i = array.length - 1; i > 0; i--) {
+//         array[i] = array[i - 1];
+//     }
+//     array[0] = last;
+//     return array;
+// };
 
-// const bair = (array) => {
-// }
+// let a = [1, 2, 3, 4, 5];
+// console.log(move1(a));
+
 // 3. Өгөгдсөн массив өсөх эрэмбээр байвал true үгүй бол false буцаа
+// function toUp(array) {
+//     for (let i = 0; i < array.length - 1; i++) {
+//         if (array[i] > array[i + 1]) {
+//             return false
+//         }
+//     }
+//     return true
+
+// }
+// const a = [1, 5, 8, 4, 5];
+// const answer = toUp(a)
+// console.log(answer);
+
 // 4. HackerLand University has the following grading policy:
 // - Every student receives a in the inclusive range from  to.
 //         - Any  less than  is a failing grade.
@@ -201,6 +218,12 @@ console.log(Negative(a));
 //  28 - do not round(result is less than 40)
 //  57 - do not round(60 - 57 is 3 or higher)
 //  Given the initial value of  for each of Sam's  students, write code to automate the rounding process.
+
+function grade(array) {
+    for (let i = 0; i < array.length; i++) {
+        
+    }
+}
 
 // 1.Массивын дундаж ба медиан
 // Массив авч, дундаж(average) болон медианыг буцаа.
