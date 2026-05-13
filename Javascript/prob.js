@@ -305,28 +305,59 @@
 
 
 // 5. Өгөгдсөн тооны цифрүүдийн нийлбэрийг ол.
-function sumOfArray(too) {
-    let sum = 0
-    let b = 0
-    for (let i = too; i > 1; i = i / 10) {
-        b = too % 10
-        sum = sum + b
-        too = (too - b) / 10
-    }
-    return sum
-}
-
-let nums = 128;
-const answer = sumOfArray(nums)
-console.log(answer);
+// function sumOfArray(too) {
+//     let sum = 0
+//     let b = 0
+//     for (let i = too; i > 1; i = i / 10) {
+//         b = too % 10
+//         sum = sum + b
+//         too = (too - b) / 10
+//     }
+//     return sum
+// }
+// let nums = 128;
+// const answer = sumOfArray(nums)
+// console.log(answer);
 
 // 6. Өгөгдсөн тоо палиндром бол true үгүй бол false буцаа. Палиндром тоо гэдэг нь тонгорогсон тоотойгоо тэнцүү тоог хэлнэ
-function palindrome(text) {
+// function palindrome(numb) {
+//     let a = numb.toString()
+//     for (let i = 0; i < a.length; i++) {
+//         if (a[i] !== a[a.length - 1 - i]) {
+//             return false
+//         }
+//         return true
+//     }
+// }
 
-}
-
+// let number = 2442
+// const answer = palindrome(number)
+// console.log(answer);
 
 // 7. Өгөгдсөн хоёр натурал тооны хамгийн их ерөнхий хуваагчийг ол.
+
+function natural(a, b) {
+    let start = 0
+    let divider = 0
+    if (a > b) {
+        start = b
+    } else if (a < b) {
+        start = a
+    }
+    for (let i = start; i > 0; i--) {
+        if (a % i == 0 && b % i == 0) {
+            divider = i
+        }
+    }
+    
+}
+
+let too1 = 15
+let too2 = 24
+const answer = natural(too1, too2)
+console.log(answer);
+
+
 // 8. Хүү n гишгүүртэй шатаар өгсөхдөө 2 янзаар урагшилж чадна. Зогсож байгаа гишгүүрийнхээ дараах гишгүүрт, эсвэл 1 алгасаад дараагийн гишгүүрт алхаж очно. Нэгдүгээр гишгүүрийн өмнө зогсож байгаа хүү n-р гишгүүр хүртэл хичнээн ялгаатай маршрутаар алхаж очиж вэ?
 // 9. Фибоначчийн дарааллын n-р гишүүнийг ол.
 // 10. Өгөгдөн массивийн i аас j дэх гишүүдийн хамгийн багыг ол
