@@ -219,12 +219,6 @@
 //  57 - do not round(60 - 57 is 3 or higher)
 //  Given the initial value of  for each of Sam's  students, write code to automate the rounding process.
 
-function grade(array) {
-    for (let i = 0; i < array.length; i++) {
-        
-    }
-}
-
 // 1.Массивын дундаж ба медиан
 // Массив авч, дундаж(average) болон медианыг буцаа.
 //     Жишээ: [1, 2, 3, 4, 5] → { avg: 3, median: 3 }
@@ -249,11 +243,89 @@ function grade(array) {
 
 // 1. Remove Duplicates from Sorted Array-leet
 // nums = [1, 4, 6, 6, 8, 10]
-// 2. Өгөгдсөн гурвалжингийн гурвалжин болж чадах эсэхийг шалгаад, талбайг ол. .
+// function remove(array) {
+//     let single = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (!single.includes(array[i])) {
+//             single.push(array[i]);
+//         }
+//     }
+//     return single;
+// }
+
+// let nums = [1, 4, 6, 5, 6, 8, 10];
+// console.log(remove(nums));
+
+// 2. Өгөгдсөн гурвалжингийн гурвалжин болж чадах эсэхийг шалгаад, талбайг ол.
+// function triangle(a, b, c) {
+//     if (a + b > c && a + c > b && b + c > a) {
+//         let p = (a + b + c) / 2;
+//         let S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+//         return "Гурвалжингийн талбай нь: " + S;
+//     } else {
+//         return "Гурвалжин болохгүй";
+//     }
+// }
+// let a = 3;
+// let b = 4;
+// let c = 5;
+// console.log(triangle(a, b, c));
+
 // 3. Өгөгдсөн утасны дугаарыг аль оператор болохыг буцаа.
-// 4. Өгөгдсөн тойргийг талбайг ол. 
+
+
+// function operator(phone) {
+//     let a = phone.toString().slice(0, 2)
+
+//     if (a == "99" || a == "85") {
+//         return "Mobicom"
+//     } else if (a == "88" || a == "80") {
+//         return "Unitel"
+//     } else if (a == "96" || a == "90") {
+//         return "Skytel"
+//     } else if (a == "98" || a == "93") {
+//         return "G-Mobile"
+//     }
+// }
+// let numb = 99664639
+// const answer = operator(numb)
+// console.log(answer);
+
+// 4. Өгөгдсөн тойргийг талбайг ол. r=4
+
+// function talbai(radius) {
+//     s = 0
+//     pi = 3.14
+//     s = pi * radius * radius
+//     return s
+// }
+// let r = 4
+// const answer = talbai(r)
+// console.log(answer);
+
+
 // 5. Өгөгдсөн тооны цифрүүдийн нийлбэрийг ол.
+function sumOfArray(too) {
+    let sum = 0
+    let b = 0
+    for (let i = too; i > 1; i = i / 10) {
+        b = too % 10
+        sum = sum + b
+        too = (too - b) / 10
+    }
+    return sum
+}
+
+let nums = 128;
+const answer = sumOfArray(nums)
+console.log(answer);
+
 // 6. Өгөгдсөн тоо палиндром бол true үгүй бол false буцаа. Палиндром тоо гэдэг нь тонгорогсон тоотойгоо тэнцүү тоог хэлнэ
+function palindrome(text) {
+
+}
+
+
 // 7. Өгөгдсөн хоёр натурал тооны хамгийн их ерөнхий хуваагчийг ол.
 // 8. Хүү n гишгүүртэй шатаар өгсөхдөө 2 янзаар урагшилж чадна. Зогсож байгаа гишгүүрийнхээ дараах гишгүүрт, эсвэл 1 алгасаад дараагийн гишгүүрт алхаж очно. Нэгдүгээр гишгүүрийн өмнө зогсож байгаа хүү n-р гишгүүр хүртэл хичнээн ялгаатай маршрутаар алхаж очиж вэ?
 // 9. Фибоначчийн дарааллын n-р гишүүнийг ол.
