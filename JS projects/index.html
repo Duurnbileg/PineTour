@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h2>Элемент сонгох аргууд</h2>
+    <p>Доорхи HTML кодийг ажиглаад дараах хувьсагчид тохирсон элементийг сонгож бич</p>
+    <hr>
+    <!-- HTML элементүүд -->
+    <h1 id="pageTitle">Миний веб хуудас</h1>
+    <p class="description">Энэ бол анхны тайлбар</p>
+    <p class="description2">Энэ бол хоёр дох тайлбар</p>
+    <p id="greetings">Сайн уу!</p>
+    <p id="fact">Энд бичиг гарна.</p>
+    <input type="text" id="nameInput" placeholder="Write your name...">
+    <button onclick="greetUser()">Намайг дар</button>
+    <div id="outputText"></div>
+    <br>
+    <hr>
+    <br>
+    <div id="resultBox">Дэлхий дээр хамгийн өндөр уул юу вэ0?</div>
+    <br>
+    <button onclick="showMessage()">Хариуг харах</button>
+    <br>
+    <hr>
+    <br>
+    <p>Амттан захиалах булан</p>
+    <div id="cakeOrder">Ямар амттан захиалах вэ?</div>
+    <br>
+    <button onclick="showOrder(`зайрмаг`)">Зайрмаг</button>
+    <button onclick="showOrder(`чихэр`)">Чихэр</button>
+    <button onclick="showOrder(`бялуу`)">Бялуу</button>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
