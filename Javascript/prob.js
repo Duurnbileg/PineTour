@@ -88,11 +88,18 @@
 
 // const Negative = (array) => {
 //     let result = [];
+//     let negativeIndex = 0;
 //     for (let i = 0; i < array.length; i++) {
 //         if (array[i] < 0) {
-//             result.unshift(array[i]);
-//         } else {
-//             result.push(array[i]);
+//             result[negativeIndex] = array[i];
+//             negativeIndex++;
+//         }
+//     }
+//     let positiveIndex = negativeIndex;
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] >= 0) {
+//             result[positiveIndex] = array[i];
+//             positiveIndex++;
 //         }
 //     }
 //     return result;
@@ -100,7 +107,6 @@
 
 // let a = [1, -2, 7, -4, 5, -11, 8];
 // console.log(Negative(a));
-
 
 // Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
 // const numFind = (array) => {
@@ -144,14 +150,13 @@
 
 // 4. Өгөгдсөн массивын хамгийн их элемент хэд дэх нь вэ? Хэрэв хамгийн их элементийн тоо 1-ээс олон бол бага дугаарыг нь хэвлэнэ.[12,1,25,67,87,90,98]
 
-// let a = [12, 1, 98, 67, 87, 90, 98];
-// let max = a[0];
-// let maxIndex = 0;
 // const Findmax = (a) => {
+//     let max = a[0];
+//     let maxIndex = 0;
 //     for (let i = 1; i < a.length; i++) {
-//         if (a[i] >= max) {
+//         if (a[i] > max) {
 //             max = a[i];
-//             maxIndex = i;
+//             maxIndex = i
 //         }
 //     }
 //     return maxIndex
@@ -222,15 +227,102 @@
 // 1.Массивын дундаж ба медиан
 // Массив авч, дундаж(average) болон медианыг буцаа.
 //     Жишээ: [1, 2, 3, 4, 5] → { avg: 3, median: 3 }
+// function average(array) {
+//     let sum = 0
+//     let avg = 0
+//     let median = 0
+//     for (let i = 0; i < array.length; i++) {
+//         sum = sum + array[i]
+//     }
+
+//     avg = sum / array.length
+
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = i + 1; j < array.length; j++) {
+//             if (array[i] > array[j]) {
+//                 let too = array[i]
+//                 array[i] = array[j]
+//                 array[j] = too
+//             }
+//         }
+//     }
+
+//     let mid = Math.floor(array.length / 2)
+
+//     if (array.length % 2 === 1) {
+//         median = array[mid]
+//     } else {
+//         median = (array[mid - 1] + array[mid]) / 2
+//     }
+
+//     return { avg, median }
+// }
+
+// let nums = [23, 45, 32, 56, 12]
+// const answer = average(nums)
+// console.log(answer)
+
 // 2.String доторх эгшиг тоолох
 // String авч, хэдэн эгшиг(a, e, i, o, u) байгааг буцаа.
 //     Жишээ: "hello" → 2
+// function findVowel(text) {
+//     let count = 0
+//     for (let i = 0; i < text.length; i++) {
+//         if (text[i] == "a" ||
+//             text[i] == "o" ||
+//             text[i] == "e" ||
+//             text[i] == "u" ||
+//             text[i] == "i") {
+//             count = count + 1
+//         }
+//     }
+//     return count
+// }
+
+// console.log(findVowel("naranbaatar"));
+
 // 3.Anagram шалгах
 // Хоёр string авч, үсгийн дараалал өөр боловч ижил үсгээр бүтсэн эсэхийг шалга.
 //     Жишээ: "listen" & "silent" → true
+
+// function anagram(text1, text2) {
+//     if (text1.length !== text2.length) {
+//         return false
+//     }
+//     let used = []
+//     for (let i = 0; i < text1.length; i++) {
+//         let oldson = false
+//         for (let j = 0; j < text2.length; j++) {
+//             if (text1[i] == text2[j] && used[j] != true) {
+//                 used[j] = true
+//                 oldson = true
+//                 break
+//             }
+//         }
+//         if (oldson == false) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// let ug1 = "listen"
+// let ug2 = "silent"
+
+// console.log(anagram(ug1, ug2))
+
 // 4.Тоог Ром тоо болгох
 // Тоо авч, Ром цифр болгон буцаадаг функц бич.
 //     Жишээ: 14 → XIV, 2025 → MMXXV
+function romanNum(too) {
+    let too = 0
+    let save = 0
+    for (let i = too; i > 1; i = i / 10) {
+
+    }
+}
+
+
 // 5.Longest Increasing Subsequence(LIС) – энгийн хувилбар
 // Массив авч, хамгийн урт өсөх дарааллын уртыг буцаа.
 //     Жишээ: [10, 9, 2, 5, 3, 7, 101, 18] → 4([2, 3, 7, 101])
@@ -315,7 +407,7 @@
 //     }
 //     return sum
 // }
-// let nums = 128;
+// let nums = 1288;
 // const answer = sumOfArray(nums)
 // console.log(answer);
 
@@ -336,35 +428,106 @@
 
 // 7. Өгөгдсөн хоёр натурал тооны хамгийн их ерөнхий хуваагчийг ол.
 
-function natural(a, b) {
-    let start = 0
-    let divider = 0
-    if (a > b) {
-        start = b
-    } else if (a < b) {
-        start = a
-    }
-    for (let i = start; i > 0; i--) {
-        if (a % i == 0 && b % i == 0) {
-            divider = i
-        }
-    }
-    
-}
+// function natural(a, b) {
+//     let start = 0
+//     let divider = 0
+//     if (a > b) {
+//         start = b
+//     } else if (a < b) {
+//         start = a
+//     }
+//     for (let i = start; i > 0; i--) {
+//         if (a % i == 0 && b % i == 0) {
+//             divider = i
+//             return divider
+//         }
+//     }
+// }
 
-let too1 = 15
-let too2 = 24
-const answer = natural(too1, too2)
-console.log(answer);
+// let too1 = 16
+// let too2 = 24
+// const answer = natural(too1, too2)
+// console.log(answer);
 
+// 8. Хүү n гишгүүртэй шатаар өгсөхдөө 2 янзаар урагшилж чадна. 
+//      Зогсож байгаа гишгүүрийнхээ дараах гишгүүрт, эсвэл 1 алгасаад дараагийн гишгүүрт алхаж очно. 
+//          Нэгдүгээр гишгүүрийн өмнө зогсож байгаа хүү n-р гишгүүр хүртэл хичнээн ялгаатай маршрутаар алхаж очиж вэ?
+// function toUp(stair) {
+//     if (stair == 1) {
+//         return 1
+//     }
+//     let a = 1;
+//     let b = 2;
+//     let n = 0;
+//     for (let i = 3; i <= stair; i++) {
+//         n = a + b;
+//         a = b;
+//         b = n;
+//     }
+//     return b;
+// }
+// let too = 4;
+// console.log(toUp(too));
 
-// 8. Хүү n гишгүүртэй шатаар өгсөхдөө 2 янзаар урагшилж чадна. Зогсож байгаа гишгүүрийнхээ дараах гишгүүрт, эсвэл 1 алгасаад дараагийн гишгүүрт алхаж очно. Нэгдүгээр гишгүүрийн өмнө зогсож байгаа хүү n-р гишгүүр хүртэл хичнээн ялгаатай маршрутаар алхаж очиж вэ?
 // 9. Фибоначчийн дарааллын n-р гишүүнийг ол.
+// function fib(num) {
+//     let a = [1, 1]
+//     for (let i = 2; i < num; i++) {
+//         a.push(a[i - 2] + a[i - 1])
+//     }
+//     return a[a.length - 1]
+// }
+// console.log(fib(10));
+
 // 10. Өгөгдөн массивийн i аас j дэх гишүүдийн хамгийн багыг ол
+// let i = 2, j = 6
+// let arr = [4, 3, 6, 65, 8, 7, 90, 10, 5]
+// function findMin(array) {
+//     let min = array[i]
+//     for (let index = i; index < j; index++) {
+//         if (min > array[index]) {
+//             min = array[index]
+//         }
+//     }
+//     return min
+// }
+
+// console.log(findMin(arr));
+
 // 11. arr = [4, 3, 6, 65, 8, 7, 90, 10, 5] өсөх дарааллаар эрэмблэ.
-// 12 . Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. 
+// function increasing(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = i + 1; j < array.length; j++) {
+//             if (array[i] > array[j]) {
+//                 let too = array[i];
+//                 array[i] = array[j];
+//                 array[j] = too;
+//             }
+//         }
+//     }
+//     return array;
+// }
+
+// let array = [4, 3, 6, 65, 8, 7, 90, 10, 5];
+// console.log(increasing(array));
+
+// 12 . Given a sorted array of distinct integers and a target value, return the index if the target is found.
+//  If not, return the index where it would be if it were inserted in order. 
 // Example 1:
 // Input: nums = [1, 3, 5, 6], target = 5 Output: 2
 // Example 2:
 // Input: nums = [1, 3, 5, 6], target = 2 Output: 1
 
+// function findIndex(array, target) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (target <= array[i]) {
+//             return i;
+//         }
+//     }
+
+//     return array.length;
+// }
+
+// let nums = [1, 2, 3, 4, 6, 7, 8, 9];
+// let target = -1
+// console.log(findIndex(nums, target));
