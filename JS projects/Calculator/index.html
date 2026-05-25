@@ -14,33 +14,41 @@
         <section id="content">
             <div id="input">0</div>
             <div class="buttonContainer">
-                <button class="button greyBG"><img src="./Assets/image 1.png" alt="" style="height: 44px; width: 44px;">
+                <button class="button greyBG" onclick="remove()">
+                    <img src="./Assets/image 1.png" alt="" style="height: 44px; width: 44px;">
                 </button>
                 <button class="button greyBG" onclick="clearAll()">AC</button>
                 <button class="button greyBG" onclick="percent()">%</button>
-                <button class="button accentColorBG" onclick="uildel(`/`)"><img src="./Assets/÷.png" alt=""
-                        style="height: 24px; width: 28px;">
+                <button class="button accentColorBG" onclick="uildel(`/`)">
+                    <img src="./Assets/÷.png" alt="" style="height: 24px; width: 28px;">
                 </button>
                 <button class="button blackBG white" onclick="clickNumber(1)">1</button>
                 <button class="button blackBG white" onclick="clickNumber(2)">2</button>
                 <button class="button blackBG white" onclick="clickNumber(3)">3</button>
-                <button class="button accentColorBG white" onclick="uildel(`*`)"><img src="./Assets/x.png" alt=""
-                        style="height: 24px; width: 24px;"></button>
+                <button class="button accentColorBG white" onclick="uildel(`*`)">
+                    <img src="./Assets/x.png" alt="" style="height: 24px; width: 24px;">
+                </button>
                 <button class="button blackBG white" onclick="clickNumber(4)">4</button>
                 <button class="button blackBG white" onclick="clickNumber(5)">5</button>
                 <button class="button blackBG white" onclick="clickNumber(6)">6</button>
-                <button class="button accentColorBG white" onclick="uildel(`-`)"><img src="./Assets/-.png" alt=""
-                        style="height: 24px; width: 24px;"></button>
-                <button class=" button blackBG white" onclick="clickNumber(7)">7</button>
+                <button class="button accentColorBG white" onclick="uildel(`-`)">
+                    <img src="./Assets/-.png" alt="" style="height: 24px; width: 24px;">
+                </button>
+                <button class="button blackBG white" onclick="clickNumber(7)">7</button>
                 <button class="button blackBG white" onclick="clickNumber(8)">8</button>
                 <button class="button blackBG white" onclick="clickNumber(9)">9</button>
-                <button class="button accentColorBG white" onclick="uildel(`+`)"><img src="./Assets/+.png" alt=""
-                        style="height: 24px; width: 24px;"></button>
-                <button class=" button blackBG white"><img src="./Assets/-&+.png" alt="" class="buttonIMg"></button>
+                <button class="button accentColorBG white" onclick="uildel(`+`)">
+                    <img src="./Assets/+.png" alt="" style="height: 24px; width: 24px;">
+                </button>
+                <button class="button blackBG white" onclick="toggleSign()">
+                    <img src="./Assets/-&+.png" alt="" class="buttonIMg">
+                </button>
                 <button class="button blackBG white" onclick="clickNumber(0)">0</button>
-                <button class="button blackBG white">.</button>
-                <button class="button accentColorBG white" onclick="equal()"><img src="./Assets/=.png" alt=""
-                        style="height: 24px; width: 24px;"></button>
+                <button class="button blackBG white" onclick="clickDot()">.</button>
+                <button class="button accentColorBG white" onclick="equal()">
+                    <img src="./Assets/=.png" alt="" style="height: 24px; width: 24px;">
+                </button>
+
             </div>
         </section>
     </main>
