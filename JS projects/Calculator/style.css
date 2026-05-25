@@ -7,14 +7,13 @@
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 48px;
 }
 
-.container {
-  height: 926px;
-  width: 428px;
+.display {
+  height: 726px;
+  width: 390px;
   background-color: black;
   border-radius: 30px;
   padding: 16px 16px 80px 16px;
@@ -27,7 +26,7 @@ body {
 #content {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   justify-content: center;
   gap: 16px;
@@ -36,14 +35,15 @@ body {
 .buttonContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 8px;
   width: 100%;
 }
 
-.button {
+button {
+  border: none;
   border-radius: 999px;
-  height: 88px;
-  width: 88px;
+  height: 82px;
+  width: 82px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +76,9 @@ body {
 }
 
 #input {
-  height: 108px;
+  height: auto;
   width: 100%;
+  font-size: 48px;
+  color: #fff;
+  text-align: right;
 }

@@ -9,41 +9,42 @@
 </head>
 
 <body>
-    <main class="container">
-        <img src="./Assets/Default - White.png" alt="" style="height: 49px;
-        width: 391px;">
+    <main class="display">
+        <img src="./Assets/Default - White.png" alt="" style="width: 390px;">
         <section id="content">
-            <div id="input"></div>
+            <div id="input">0</div>
             <div class="buttonContainer">
-                <div class="button greyBG"><img src="./Assets/image 1.png" alt="" style="height: 44px; width: 44px;">
-                </div>
-                <div class="button greyBG">AC</div>
-                <div class="button greyBG">%</div>
-                <div class="button accentColorBG"><img src="./Assets/÷.png" alt="" style="height: 24px; width: 28px;">
-                </div>
-                <div class="button blackBG white">1</div>
-                <div class="button blackBG white">2</div>
-                <div class="button blackBG white">3</div>
-                <div class="button accentColorBG white"><img src="./Assets/x.png" alt=""
-                        style="height: 24px; width: 24px;"></div>
-                <div class="button blackBG white">4</div>
-                <div class="button blackBG white">5</div>
-                <div class="button blackBG white">6</div>
-                <div class="button accentColorBG white"><img src="./Assets/-.png" alt=""
-                        style="height: 24px; width: 24px;"></div>
-                <div class=" button blackBG white">7</div>
-                <div class="button blackBG white">8</div>
-                <div class="button blackBG white">9</div>
-                <div class="button accentColorBG white"><img src="./Assets/+.png" alt=""
-                        style="height: 24px; width: 24px;"></div>
-                <div class=" button blackBG white"><img src="./Assets/-&+.png" alt="" class="buttonIMg"></div>
-                <div class="button blackBG white">0</div>
-                <div class="button blackBG white">.</div>
-                <div class="button accentColorBG white"><img src="./Assets/=.png" alt=""
-                        style="height: 24px; width: 24px;"></div>
+                <button class="button greyBG"><img src="./Assets/image 1.png" alt="" style="height: 44px; width: 44px;">
+                </button>
+                <button class="button greyBG" onclick="clearAll()">AC</button>
+                <button class="button greyBG" onclick="percent()">%</button>
+                <button class="button accentColorBG" onclick="uildel(`/`)"><img src="./Assets/÷.png" alt=""
+                        style="height: 24px; width: 28px;">
+                </button>
+                <button class="button blackBG white" onclick="clickNumber(1)">1</button>
+                <button class="button blackBG white" onclick="clickNumber(2)">2</button>
+                <button class="button blackBG white" onclick="clickNumber(3)">3</button>
+                <button class="button accentColorBG white" onclick="uildel(`*`)"><img src="./Assets/x.png" alt=""
+                        style="height: 24px; width: 24px;"></button>
+                <button class="button blackBG white" onclick="clickNumber(4)">4</button>
+                <button class="button blackBG white" onclick="clickNumber(5)">5</button>
+                <button class="button blackBG white" onclick="clickNumber(6)">6</button>
+                <button class="button accentColorBG white" onclick="uildel(`-`)"><img src="./Assets/-.png" alt=""
+                        style="height: 24px; width: 24px;"></button>
+                <button class=" button blackBG white" onclick="clickNumber(7)">7</button>
+                <button class="button blackBG white" onclick="clickNumber(8)">8</button>
+                <button class="button blackBG white" onclick="clickNumber(9)">9</button>
+                <button class="button accentColorBG white" onclick="uildel(`+`)"><img src="./Assets/+.png" alt=""
+                        style="height: 24px; width: 24px;"></button>
+                <button class=" button blackBG white"><img src="./Assets/-&+.png" alt="" class="buttonIMg"></button>
+                <button class="button blackBG white" onclick="clickNumber(0)">0</button>
+                <button class="button blackBG white">.</button>
+                <button class="button accentColorBG white" onclick="equal()"><img src="./Assets/=.png" alt=""
+                        style="height: 24px; width: 24px;"></button>
             </div>
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
