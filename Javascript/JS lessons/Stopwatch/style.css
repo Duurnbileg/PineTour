@@ -39,7 +39,7 @@ body {
     margin-bottom: 25px;
 }
 
-.timer {
+#timer {
     font-size: 72px;
     font-weight: bold;
     letter-spacing: 4px;
@@ -54,12 +54,12 @@ body {
 }
 
 .left {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 15px;
 }
 
 button {
+    width: 100%;
     padding: 15px;
     border: none;
     border-radius: 16px;

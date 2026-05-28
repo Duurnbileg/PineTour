@@ -109,15 +109,17 @@
 // console.log(Negative(a));
 
 // Дараалсан тоонуудаас бүрдэх массив өгөгдөх байсан боловч 1 тоо нь дутуу байв. Тэр тоог ол
-// const numFind = (array) => {
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] + 1 !== array[i + 1]) {
-//             return array[i] + 1
-//         }
-//     }
-// }
-// let a = [1, 2, 3, 4, 5, 6, 7, 9, 10];
-// console.log(numFind(a));
+const numFind = (array) => {
+    let hoosn = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] + 1 !== array[i + 1]) {
+            hoosn.push(array[i] + 1)
+        }
+    }
+    return hoosn
+}
+let a = [1, 2, 4, 5, 6, 7, 9, 10];
+console.log(numFind(a));
 
 // 1. Өгөгдсөн массивын гишүүдийн нийлбэрийг ол.
 // let massive = [12, 98, 80, 80, 76, 27];
@@ -314,13 +316,13 @@
 // 4.Тоог Ром тоо болгох
 // Тоо авч, Ром цифр болгон буцаадаг функц бич.
 //     Жишээ: 14 → XIV, 2025 → MMXXV
-function romanNum(too) {
-    let too = 0
-    let save = 0
-    for (let i = too; i > 1; i = i / 10) {
+// function romanNum(too) {
+//     let too = 0
+//     let save = 0
+//     for (let i = too; i > 1; i = i / 10) {
 
-    }
-}
+//     }
+// }
 
 
 // 5.Longest Increasing Subsequence(LIС) – энгийн хувилбар
