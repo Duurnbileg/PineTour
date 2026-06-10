@@ -12,14 +12,13 @@ export default function Home() {
   const inputAdd = () => {
     setnumber(number + 1)
     setsavedInput([...savedInput, inputValue])
+    setinputValue("")
   }
 
   const [select, setselect] = useState("All");
   const handleAll = (newStyle) => {
     setselect(newStyle);
   };
-
-
 
   return (
     <div className="w-full min-h-screen flex justify-center pt-12 bg-gray-100">
@@ -69,7 +68,12 @@ export default function Home() {
               Completed
             </button>
           </div>
-            <List />
+          {/* <div>
+              {tasks.map(({item}, {index}) => {
+                return <List hiihZuil={item} key={index} />;
+              })}
+            </div> */}
+          <List />
           <p className="text-center text-gray-500 mt-8">
             No tasks yet. Add one above!
           </p>
