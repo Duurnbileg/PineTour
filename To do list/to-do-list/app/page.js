@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import List from "@/app/components/list"
+import List from "./components/list";
 
 export default function Home() {
   const [inputValue, setinputValue] = useState("")
@@ -69,11 +69,7 @@ export default function Home() {
               Completed
             </button>
           </div>
-          <div>
-            {savedInput.map((item, index) => {
-              return <List items={inputValue} key={index} />
-            })}
-          </div>
+            <List />
           <p className="text-center text-gray-500 mt-8">
             No tasks yet. Add one above!
           </p>
@@ -87,4 +83,5 @@ export default function Home() {
       </div>
     </div>
   );
+  ``
 }
