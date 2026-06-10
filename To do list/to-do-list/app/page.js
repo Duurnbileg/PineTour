@@ -1,14 +1,25 @@
 "use client";
 import { useState } from "react";
+import List from "@/app/components/list"
 
 export default function Home() {
   const [inputValue, setinputValue] = useState("")
+  const [savedInput, setsavedInput] = useState([])
+  const [number, setnumber] = useState(0)
+
+  console.log(savedInput);
+
+  const inputAdd = () => {
+    setnumber(number + 1)
+    setsavedInput([...savedInput, inputValue])
+  }
+
   const [select, setselect] = useState("All");
   const handleAll = (newStyle) => {
     setselect(newStyle);
   };
 
-  const 
+
 
   return (
     <div className="w-full min-h-screen flex justify-center pt-12 bg-gray-100">
@@ -17,18 +28,23 @@ export default function Home() {
           <h1 className="text-center font-semibold text-2xl text-[black] ">
             To-Do list
           </h1>
-          <div className="flex gap-2 mt-4">
-            <input
-              placeholder="Add a new task..."
-              className="flex-1 w-[300px] border border-gray-300 rounded-md px-3 py-2 text-[#71717A]"
-              onChange={(event) => set}
-            />
-            <button className="bg-blue-500 text-white px-6 rounded-md">
-              Add
-            </button>
+          <div className="flex flex-col mt-4">
+            <div className="flex gap-2 mt-4">
+              <input
+                placeholder="Add a new task..."
+                className="flex-1 w-[300px] border border-gray-300 rounded-md px-3 py-2 text-black"
+                onChange={(event) => setinputValue(event.target.value)}
+              />
+              <button
+                onClick={inputAdd}
+                className="bg-blue-500 text-white px-6 rounded-md">
+                Add
+              </button>
+            </div>
+            <p className="text-black mt-1 px-4">{number} tasks</p>
           </div>
 
-          <div className="flex gap-2 mt-4">
+          <div className="flex gap-2">
             <button
               onClick={() => handleAll("All")}
               className={` rounded-lg px-6 py-3 text-black ${select === "All" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
@@ -52,6 +68,11 @@ export default function Home() {
             >
               Completed
             </button>
+          </div>
+          <div>
+            {savedInput.map((item, index) => {
+              return <List items={inputValue} key={index} />
+            })}
           </div>
           <p className="text-center text-gray-500 mt-8">
             No tasks yet. Add one above!
