@@ -1,24 +1,26 @@
 "use client";
 import { useState } from "react";
 import List from "./components/list";
+import Alert from "./components/alert";
 
 export default function Home() {
   const [inputValue, setinputValue] = useState("")
   const [savedInput, setsavedInput] = useState([])
   const [number, setnumber] = useState(0)
 
-  console.log(savedInput);
-
   const inputAdd = () => {
-    setnumber(number + 1)
-    setsavedInput([...savedInput, inputValue])
-    setinputValue("")
+    if (inputValue !== "") {
+      setsavedInput([...savedInput, inputValue])
+      setinputValue("")
+    }
   }
 
   const [select, setselect] = useState("All");
   const handleAll = (newStyle) => {
     setselect(newStyle);
   };
+
+  // setnumber(number + 1)
 
   return (
     <div className="w-full min-h-screen flex justify-center pt-12 bg-gray-100">
@@ -40,13 +42,12 @@ export default function Home() {
                 Add
               </button>
             </div>
-            <p className="text-black mt-1 px-4">{number} tasks</p>
           </div>
 
           <div className="flex gap-2">
             <button
               onClick={() => handleAll("All")}
-              className={` rounded-lg px-6 py-3 text-black ${select === "All" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
+              className={` rounded-lg px-4 py-2 text-black ${select === "All" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
                 }`}
             >
               All
@@ -54,7 +55,7 @@ export default function Home() {
 
             <button
               onClick={() => handleAll("Active")}
-              className={` rounded-lg px-6 py-3 text-black ${select === "Active" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
+              className={` rounded-lg px-4 py-2 text-black ${select === "Active" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
                 }`}
             >
               Active
@@ -62,7 +63,7 @@ export default function Home() {
 
             <button
               onClick={() => handleAll("Completed")}
-              className={` rounded-lg px-6 py-3 text-black ${select === "Completed" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
+              className={` rounded-lg px-4 py-2 text-black ${select === "Completed" ? "bg-[#3C82F6] text-white" : "bg-gray-100 "
                 } `}
             >
               Completed
@@ -73,7 +74,11 @@ export default function Home() {
                 return <List hiihZuil={item} key={index} />;
               })}
             </div> */}
-          <List />
+          <div>
+            <List />
+          </div>
+          <Alert number={number} />
+
           <p className="text-center text-gray-500 mt-8">
             No tasks yet. Add one above!
           </p>
