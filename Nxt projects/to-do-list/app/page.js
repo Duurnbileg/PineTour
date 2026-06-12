@@ -15,6 +15,9 @@ export default function Home() {
     }
   }
 
+  console.log(savedInput);
+
+
   const [select, setselect] = useState("All");
   const handleAll = (newStyle) => {
     setselect(newStyle);
@@ -69,13 +72,10 @@ export default function Home() {
               Completed
             </button>
           </div>
-          {/* <div>
-              {tasks.map(({item}, {index}) => {
-                return <List hiihZuil={item} key={index} />;
-              })}
-            </div> */}
           <div>
-            <List />
+            {savedInput.map((item, index) => (
+              <List key={index} savedInput={item} />
+            ))}
           </div>
           <Alert number={number} />
 
