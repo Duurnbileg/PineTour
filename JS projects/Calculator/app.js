@@ -9,10 +9,16 @@ function clickNumber(param) {
 }
 
 function uildel(param) {
-    if (current === "") {
+    if (current == "") {
+        temdeg = param;
         return;
     }
-    hadgalsan = Number(current);
+
+    if (temdeg !== "") {
+        equal();
+    } else {
+        hadgalsan = Number(current);
+    }
     current = "";
     temdeg = param;
 }
