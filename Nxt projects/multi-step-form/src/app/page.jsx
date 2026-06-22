@@ -1,7 +1,17 @@
+"use client"
+import { useState } from "react";
+import Step1 from "./features/step1";
+import Step2 from "./features/step2";
+import Step3 from "./features/step3";
+
+
 export default function Home() {
+  const [step, setStep] = useState(1)
   return (
     <main className="bg-[#f4f4f4] flex items-center justify-center h-dvh">
-      <div className="bg-white w-75 h-75 rounded-l"></div>
+      <Step1 />
+      <Step2 />
+      <Step3 />
     </main>
   )
 }
