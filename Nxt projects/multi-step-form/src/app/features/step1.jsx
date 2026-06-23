@@ -1,5 +1,6 @@
 import Input from "@/app/components/input";
-import Button from "@/app/components/button";
+import Button from "@/app/components/secondaryBtn";
+import PrimaryBtn from "../components/primaryBtn";
 
 export default function Step1() {
     return (
@@ -16,7 +17,9 @@ export default function Step1() {
                     <Input />
                 </div>
             </div>
-            <Button />
+            <div className="flex items-center justify-center">
+                <PrimaryBtn />
+            </div>
         </div>
     )
 }

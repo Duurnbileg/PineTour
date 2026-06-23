@@ -1,5 +1,6 @@
 import Input from "@/app/components/input";
-import Button from "@/app/components/button";
+import SecondBtn from "@/app/components/secondaryBtn";
+import PrimaryBtn from "../components/primaryBtn";
 
 export default function Step3() {
     const inputType = "date"
@@ -18,7 +19,10 @@ export default function Step3() {
                     <p>duuree</p>
                 </div>
             </div>
-            <Button />
+            <div className="flex gap-3">
+                <SecondBtn />
+                <PrimaryBtn />
+            </div>
         </div>
     )
 }

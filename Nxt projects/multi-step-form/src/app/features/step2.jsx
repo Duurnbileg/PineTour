@@ -1,5 +1,6 @@
 import Input from "@/app/components/input";
-import Button from "@/app/components/button";
+import PrimaryBtn from "../components/primaryBtn";
+import SecondBtn from "../components/secondaryBtn";
 
 export default function Step2() {
     return (
@@ -17,9 +18,9 @@ export default function Step2() {
                     <Input />
                 </div>
             </div>
-            <div>
-                <Button />
-                <Button />
+            <div className="flex gap-3">
+                <SecondBtn />
+                <PrimaryBtn />
             </div>
         </div>
     )
