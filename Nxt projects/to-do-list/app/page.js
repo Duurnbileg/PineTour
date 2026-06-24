@@ -28,6 +28,7 @@ export default function Home() {
       setsavedInput(
         savedInput.filter((task) => task.id !== id)
       );
+      setnumber(number - 1)
     }
   };
 
