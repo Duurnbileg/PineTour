@@ -1,27 +1,70 @@
 import Input from "@/app/components/input";
 import SecondBtn from "@/app/components/secondaryBtn";
 import PrimaryBtn from "../components/primaryBtn";
+import { useState } from "react";
+import ImgInput from "../components/ImgInput";
+import Image from "next/image";
 
-export default function Step3() {
-    const inputType = "date"
+export default function Step3({ handleFinish, handleBackStep, formData, setFormData }) {
+    const [profilePicture, setProfilePicture] = useState(null);
+    const [dateOfBirthError, setDateOfBirthError] = useState("");
+    const [profilePictureError, setProfilePictureError] = useState("");
+
+    const validateInput = () => {
+        let isValid = true;
+
+        if (formData.dateOfBirth.length == 0) {
+            setDateOfBirthError("Төрсөн огноогоо оруулна уу");
+            isValid = false;
+        } else {
+            setDateOfBirthError("");
+        }
+
+        if (profilePicture == null) {
+            setProfilePictureError("Профайл зураг оруулна уу");
+            isValid = false;
+        } else {
+            setProfilePictureError("");
+        }
+
+        return isValid;
+    };
+
+    const handleButtonClick = () => {
+        if (validateInput() == true) {
+            handleFinish();
+        }
+    };
+
     return (
-        <div className="bg-white h-[650px] w-[480px] rounded-xl p-8 flex flex-col justify-between">
-            <div className="bg-white rounded-xl flex flex-col gap-7">
+        <div className="bg-white h-[650px] w-[480px] rounded-xl p-8 gap-20 flex flex-col justify-between">
+            <div className="bg-white rounded-xl flex flex-col gap-7 h-full">
                 <div className="flex flex-col gap-1">
-                    <img src="/logo.svg" alt="" className="h-[60px] w-[60px]" />
+                    <Image src="/logo.svg" alt="Logo" width={60} height={60} />
                     <h1 className="text-black text-[26px] font-semibold">Join Us! 😎</h1>
                     <p className="text-gray-500 font-medium text-lg">Please provide all current information accurately.</p>
                 </div>
                 <div className="flex flex-col gap-4">
-                    <Input inputType={inputType} />
+                    <Input
+                        placeholder="Date of birth"
+                        inputType="date"
+                        value={formData.dateOfBirth}
+                        onChange={(e) => setFormData({
+                            ...formData,
+                            dateOfBirth: e.target.value
+                        })}
+                        error={dateOfBirthError}
+                    />
                 </div>
-                <div className="h-full bg-red-200">
-                    <p>duuree</p>
-                </div>
+                <ImgInput
+                    placeholder="Profile picture"
+                    onChange={(e) => setProfilePicture(e.target.files[0] ?? null)}
+                    error={profilePictureError}
+                />
             </div>
             <div className="flex gap-3">
-                <SecondBtn />
-                <PrimaryBtn />
+                <SecondBtn onClick={handleBackStep} className="w-[40%]">Back</SecondBtn>
+                <PrimaryBtn onClick={handleButtonClick} className="w-[60%]">Submit 3 / 3</PrimaryBtn>
             </div>
         </div>
     )
